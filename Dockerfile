@@ -4,6 +4,4 @@ WORKDIR /app
 
 COPY . /app
 
-RUN mkdir outdir
-
 RUN pip install -r requirements.txt
