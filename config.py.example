@@ -67,7 +67,7 @@ LINK_SHORTENER_PARAMS =  {}
 TIMEZONE='America/Los_Angeles'
 
 # Used as the link field in the RSS feed
-WEBSITE='https://blm-cal.tech-bloc-sea.dev/'
+WEBSITE='https://blm-cal.tech-bloc-sea.dev'
 
 # Used as the location of this feed
 FEED_LINK="{}/seattleblmcalendar.rss".format(WEBSITE)
