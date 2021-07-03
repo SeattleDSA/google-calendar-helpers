@@ -832,9 +832,8 @@ def write_transformation(transform_type):
     # No else should be needed. 
     # print("dest is: {}".format(dest))
 
-    # Insert Windows newlines for dumb email clients
-    outfile = open(dest, "w", newline='\r\n', encoding='utf8')
-    outfile.write(generated_file)
+    # Just print the file so we can pipe it somewhere outside of the conatiner
+    print(generated_file)
 
 
 

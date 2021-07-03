@@ -23,7 +23,7 @@ TWITTER_ACCESS_SECRET='Insert-Your-Twitter-Access-Token-Secret'
 # (such as calendar title and description). Subsequent calendars 
 # contribute only events.
 CALENDAR_IDS=[
-    "nlkc39jt4p0nbc4pk9pj7p5fh0@group.calendar.google.com",
+    "bmu9a32fkrmvmi8mu1hegp45f4@group.calendar.google.com",
     ]
 
 # How many items should be in the feed? For a busy calendar you want
@@ -64,41 +64,37 @@ LINK_SHORTENER_SERVICE = 'dagd'
 LINK_SHORTENER_PARAMS =  {}
 
 # For datetime nonsense 
-TIMEZONE='America/Toronto'
+TIMEZONE='America/Los_Angeles'
 
 # Used as the link field in the RSS feed
-WEBSITE='http://watcamp.com'
+WEBSITE='https://blm-cal.tech-bloc-sea.dev'
 
 # Used as the location of this feed
-FEED_LINK="{}/watcamp.rss".format(WEBSITE)
+FEED_LINK="{}/seattleblmcalendar.rss".format(WEBSITE)
 
 # Used as the image for the RSS feed
 LOGO="{}/img/logo.png".format(WEBSITE)
 
 # A title for the RSS feed
-RSS_TITLE='WatCamp Events'
+RSS_TITLE='Seattle BLM Events Calendar'
 
 # A short description for the RSS feed
-DESCRIPTION='Upcoming tech events in Waterloo Region'
+DESCRIPTION='Upcoming BLM events in the greater Seattle region'
 
 
 # Where to save the output, and what to call it
-PARENTDIR=os.path.abspath(os.pardir)
-OUTRSS=os.path.join(PARENTDIR, "output", "watcamp.rss")
-OUTNEWS=os.path.join(PARENTDIR, "output", "watcamp.txt")
-OUTJSON=os.path.join(PARENTDIR, "output", "watcamp.json")
-OUTSIDEBAR=os.path.join(PARENTDIR, "output", "watcamp-sidebar.html")
+PARENTDIR=os.path.abspath(os.curdir)
+OUTRSS=os.path.join(PARENTDIR, "seattleblmcalendar.rss")
+OUTNEWS=os.path.join(PARENTDIR, "seattleblmcalendar.txt")
+OUTJSON=os.path.join(PARENTDIR, "seattleblmcalendar.json")
+OUTSIDEBAR=os.path.join(PARENTDIR, "seattleblmcalendar-sidebar.html")
 
 # Who is responsible for this feed
-WEBMASTER="admin@example.com"
-WEBMASTER_NAME="Webmaster"
+WEBMASTER="techblocsea@protonmail.com"
+WEBMASTER_NAME="Tech Bloc SEA"
 
 # Introductory text for newsletter
 NEWSLETTER_HEADER="""
-Welcome to the watcamp.com newsletter. To contribute events to the calendar, use the Contact functionality on the website. To unsubscribe, reply to this message with the subject "unsubscribe", or visit the mailing list website.
-
-Note that "Learn More" links point to our Google Calendar, not to the event sites directly (but those event sites are usually accessible from our calendar).
-
 """
 
 
