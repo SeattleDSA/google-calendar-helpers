@@ -23,6 +23,9 @@ TWITTER_ACCESS_SECRET='Insert-Your-Twitter-Access-Token-Secret'
 # (such as calendar title and description). Subsequent calendars 
 # contribute only events.
 CALENDAR_IDS=[
+    "3rvtf5quvg3j7cm87iu1t4du20@group.calendar.google.com",
+    "67ut0oii4uma5rfsfiic7gbqtg@group.calendar.google.com",
+    "4khfuvsaf6r9vh6mkqif7gm5o0@group.calendar.google.com",
     "bmu9a32fkrmvmi8mu1hegp45f4@group.calendar.google.com",
     ]
 
