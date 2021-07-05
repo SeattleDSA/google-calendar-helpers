@@ -3,3 +3,5 @@
 from gcal_helpers import helpers
 
 helpers.write_transformation("rss")
+
+print("RSS Generation Complete")
