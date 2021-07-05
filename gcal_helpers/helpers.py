@@ -676,7 +676,7 @@ def filter_duplicate_guids(events):
 
 
 def sort_by_date(events):
-    return sorted(events, key=lambda event: event['start'].get('dateTime', event['start'].get('date', 0)))
+    return sorted(events, key=lambda event: event['start'].get('dateTime', event['start'].get('date', '')))
 
 
 # ------------------------------
