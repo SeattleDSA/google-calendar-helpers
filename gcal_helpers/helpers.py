@@ -662,6 +662,18 @@ def generate_newsletter(cal_dict):
     return output_newsletter
 
 
+def filter_duplicate_guids(events):
+    seen = set()
+    filtered = []
+    for event in events:
+        guid = event['iCalUID']
+        if guid in seen:
+            continue
+        filtered.append(event)
+        seen.add(guid)
+
+    return filtered
+
 
 # ------------------------------
 def generate_rss(cal_dict):
@@ -686,6 +698,8 @@ def generate_rss(cal_dict):
     template_env.filters['print'] = print_from_template
 
     time_now = get_time_now()
+
+    cal_dict['items'] = filter_duplicate_guids(cal_dict['items'])
 
     template = template_env.get_template( RSS_TEMPLATE ) 
     template_vars = { 
