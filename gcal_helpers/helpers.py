@@ -675,6 +675,10 @@ def filter_duplicate_guids(events):
     return filtered
 
 
+def sort_by_date(events):
+    return sorted(events, key=lambda event: event['start'].get('dateTime', event['start'].get('date', 0)))
+
+
 # ------------------------------
 def generate_rss(cal_dict):
     """ Given a JSON formatted calendar dictionary, make and return 
@@ -699,7 +703,7 @@ def generate_rss(cal_dict):
 
     time_now = get_time_now()
 
-    cal_dict['items'] = filter_duplicate_guids(cal_dict['items'])
+    cal_dict['items'] = sort_by_date(filter_duplicate_guids(cal_dict['items']))
 
     template = template_env.get_template( RSS_TEMPLATE ) 
     template_vars = { 
