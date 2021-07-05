@@ -703,6 +703,19 @@ def generate_rss(cal_dict):
 
     time_now = get_time_now()
 
+    """
+    Filtering duplicate events: Repeated events have the same calendar UID, resulting
+        in an invalid RSS feed as feeds are not allowed to have multiple `<item>`s with
+        the same `<guid>` tag. Filtering them out allows us to still list the _next_
+        iteration of that particular event though.
+    
+    Sorting by date: Because we're ingesting several calendars, the RSS feed will end up
+        being ordered first by the arbitrary order of the calendar IDs in the config and then
+        by the date (Google's API already sorts them by date). At this point we have several
+        date sorted lists. To get a properly sorted RSS feed we need to go ahead and actually
+        sort the full list of events by date, which we can do easily via the ISO formated date
+        time stamps.
+    """
     cal_dict['items'] = sort_by_date(filter_duplicate_guids(cal_dict['items']))
 
     template = template_env.get_template( RSS_TEMPLATE ) 
