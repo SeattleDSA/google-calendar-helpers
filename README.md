@@ -64,7 +64,7 @@ Deployment
   
 ### Production
 
-- Copy `config.py.example` to `config.py` and customize it to your
+- Copy `config.py.example` to `config.py` and customize it to your liking
 - Build the docker image with `docker build -t gcal-rss .`
 - Run the container and generate the files into a named volume: `docker run --rm -v gcal-rss-data:/data gcal-rss`
 
